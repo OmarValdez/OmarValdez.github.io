@@ -1,1 +1,338 @@
-Hello World
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechtronics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo / Brand Name -->
+            <a href="#" class="text-2xl font-bold text-indigo-700 rounded-lg p-2 hover:bg-indigo-50 transition-colors">
+                <i class="fas fa-home text-3xl mr-2"></i>Mechtronics - Tu Hogar Inteligente
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none focus:text-indigo-700 p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#inicio" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors p-2 rounded-md hover:bg-indigo-50">Inicio</a></li>
+                <li><a href="#servicios" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors p-2 rounded-md hover:bg-indigo-50">Servicios</a></li>
+                <li><a href="#nosotros" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors p-2 rounded-md hover:bg-indigo-50">Nosotros</a></li>
+                <li><a href="#contacto" class="text-gray-600 hover:text-indigo-700 font-medium transition-colors p-2 rounded-md hover:bg-indigo-50">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-lg">
+            <ul class="flex flex-col p-4 space-y-2">
+                <li><a href="#inicio" class="block text-gray-700 hover:bg-indigo-50 px-4 py-2 rounded-md transition-colors">Inicio</a></li>
+                <li><a href="#servicios" class="block text-gray-700 hover:bg-indigo-50 px-4 py-2 rounded-md transition-colors">Servicios</a></li>
+                <li><a href="#nosotros" class="block text-gray-700 hover:bg-indigo-50 px-4 py-2 rounded-md transition-colors">Nosotros</a></li>
+                <li><a href="#contacto" class="block text-gray-700 hover:bg-indigo-50 px-4 py-2 rounded-md transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-r from-indigo-600 to-purple-900 text-white py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <!-- Placeholder background image for smart home -->
+            <!-- <img src="https://placehold.co/1920x1080/5C5C5C/FFFFFF?text=Mechtronics\nTu+hogar+inteligente&font=montserrat" alt="Fondo de Hogar Inteligente" class="w-full h-full object-cover"> -->
+            <img src="https://placehold.co/1920x1080/5C5C5C/FFFFFF?text=Mechtronics&font=montserrat" alt="Fondo de Hogar Inteligente" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Transforma tu hogar en un Espacio Inteligente
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto animate-fade-in-up">
+                Ofrecemos soluciones de automatización y control para que disfrutes de comodidad, seguridad y eficiencia energética.
+            </p>
+            <a href="#contacto" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 animate-bounce-in">
+                ¡Obtén una Cotización Gratuita!
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Nuestros Servicios de Automatización</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: Iluminación Inteligente -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Iluminación Inteligente</h3>
+                    <p class="text-gray-600 text-center">
+                        Controla la iluminación de tu hogar desde cualquier lugar, ajusta ambientes y ahorra energía con sistemas automatizados.
+                    </p>
+                </div>
+
+                <!-- Service Card 2: Climatización y Temperatura -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Climatización y Temperatura</h3>
+                    <p class="text-gray-600 text-center">
+                        Mantén la temperatura ideal en cada habitación, optimiza el consumo energético y disfruta de un confort superior.
+                    </p>
+                </div>
+
+                <!-- Service Card 3: Seguridad y Vigilancia -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Seguridad y Vigilancia</h3>
+                    <p class="text-gray-600 text-center">
+                        Sistemas de cámaras, sensores de movimiento y alarmas conectados para proteger tu hogar 24/7.
+                    </p>
+                </div>
+
+                <!-- Service Card 4: Control de Acceso -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Control de Acceso</h3>
+                    <p class="text-gray-600 text-center">
+                        Cerraduras inteligentes, videoporteros y sistemas de acceso remoto para tu tranquilidad.
+                    </p>
+                </div>
+
+                <!-- Service Card 5: Entretenimiento y Multimedia -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Entretenimiento y Multimedia</h3>
+                    <p class="text-gray-600 text-center">
+                        Integra tus sistemas de audio y video para una experiencia de entretenimiento inmersiva y fácil de controlar.
+                    </p>
+                </div>
+
+                <!-- Service Card 6: Gestión de Energía -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 text-5xl mb-6 text-center">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Gestión de Energía</h3>
+                    <p class="text-gray-600 text-center">
+                        Monitorea y optimiza el consumo eléctrico de tus electrodomésticos para un hogar más eficiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <img src="https://placehold.co/600x400/6B46C1/FFFFFF?text=Equipo\nMechtronics" alt="Nuestro Equipo" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre Nosotros</h2>
+                <p class="text-gray-600 text-lg mb-4">
+                    En <span class="font-semibold text-indigo-700">Mechtronics</span>, somos un equipo de expertos apasionados por la tecnología y dedicados a transformar la forma en que interactúas con tu hogar. Creemos que la automatización debe ser accesible, intuitiva y mejorar tu calidad de vida.
+                </p>
+                <p class="text-gray-600 text-lg mb-4">
+                    Con años de experiencia en el sector, ofrecemos soluciones personalizadas que se adaptan a tus necesidades y presupuesto, desde la instalación de un solo dispositivo hasta la integración completa de un sistema domótico avanzado.
+                </p>
+                <p class="text-gray-600 text-lg">
+                    Nuestro compromiso es brindarte un servicio de excelencia, soporte continuo y la tranquilidad de saber que tu hogar está en las mejores manos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Testimonials Section (Updated with horizontal scroll) -->
+    <section class="py-16 md:py-24 bg-indigo-700 text-white">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Lo Que Dicen Nuestros Clientes</h2>
+
+            <!-- Testimonials Container with Horizontal Scroll -->
+            <div class="relative">
+                <div class="flex overflow-x-auto snap-x snap-mandatory pb-6 space-x-6 hide-scrollbar">
+                    <!-- Testimonial Card 1 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-center bg-white text-gray-800 p-8 rounded-xl shadow-xl">
+                        <p class="text-lg italic mb-6">
+                            "¡Increíble servicio! Mi casa es ahora mucho más cómoda y segura. El equipo de Tu Hogar Inteligente fue muy profesional y atento a cada detalle. ¡Totalmente recomendados!"
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Ana G., Ciudad de México</p>
+                    </div>
+
+                    <!-- Testimonial Card 2 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-center bg-white text-gray-800 p-8 rounded-xl shadow-xl">
+                        <p class="text-lg italic mb-6">
+                            "La instalación fue rápida y sin complicaciones. Ahora puedo controlar las luces y la temperatura desde mi teléfono. ¡Un cambio de vida!"
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Carlos R., Ciudad de México</p>
+                    </div>
+
+                    <!-- Testimonial Card 3 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-center bg-white text-gray-800 p-8 rounded-xl shadow-xl">
+                        <p class="text-lg italic mb-6">
+                            "Me ayudaron a integrar todos mis dispositivos inteligentes existentes y ahora funcionan a la perfección. Su conocimiento es impresionante."
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Sofía L., Ciudad de México</p>
+                    </div>
+
+                    <!-- Testimonial Card 4 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-center bg-white text-gray-800 p-8 rounded-xl shadow-xl">
+                        <p class="text-lg italic mb-6">
+                            "La gestión de energía que implementaron me ha permitido ahorrar mucho en mi factura de luz. ¡Una inversión que vale la pena!"
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Jorge M., Ciudad de México</p>
+                    </div>
+
+                    <!-- Testimonial Card 5 -->
+                    <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-center bg-white text-gray-800 p-8 rounded-xl shadow-xl">
+                        <p class="text-lg italic mb-6">
+                            "Excelente atención al cliente y soporte post-instalación. Siempre están dispuestos a ayudar con cualquier duda."
+                        </p>
+                        <p class="font-semibold text-indigo-700">- Laura P., Ciudad de México</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <a href="#contacto" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                    ¡Comienza Tu Proyecto Hoy!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Updated with Google Form Embed) -->
+    <section id="contacto" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Contáctanos</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Google Form Embed -->
+                <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Envíanos un Mensaje</h3>
+                    <p class="text-gray-600 mb-4">
+                        Por favor, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.
+                    </p>
+                    <!-- Responsive iframe container -->
+                    <div class="responsive-iframe-container">
+                        <!-- REPLACE THE 'src' BELOW WITH YOUR GOOGLE FORM EMBED URL -->
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4o5me9B9CSHtk9OI-jPpvHZgMUKkDSVK4Gyk8C-11ztjz3A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm text-center">
+                        Si tienes problemas para ver el formulario, puedes <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4o5me9B9CSHtk9OI-jPpvHZgMUKkDSVK4Gyk8C-11ztjz3A/viewform" target="_blank" class="text-indigo-600 hover:underline font-medium">abrirlo en una nueva pestaña</a>.
+                    </p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Información de Contacto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-indigo-600 text-2xl mr-4"></i>
+                            <p class="text-gray-700 text-lg"><a href="https://maps.app.goo.gl/oXh6dSFnT3Tbn6ND9" class="hover:underline">Cda. Paseo de la Unión Internacional 61, Colonia DM Nacional, CDMX, México.</a></p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-indigo-600 text-2xl mr-4"></i>
+                            <p class="text-gray-700 text-lg"><a href="https://api.whatsapp.com/send/?phone=525547341829&text=Hola%20Mechtronics,%20quisiera%20..." class="hover:underline">+52 55 4734 1829</a></p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-indigo-600 text-2xl mr-4"></i>
+                            <p class="text-gray-700 text-lg"><a href="mailto:mecaruben.mechtronics@gmail.com" class="hover:underline">mecaruben.mechtronics@gmail.com</a></p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-indigo-600 text-2xl mr-4"></i>
+                            <p class="text-gray-700 text-lg">Lunes - Viernes: 10:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Síguenos</h3>
+                        <div class="flex space-x-6">
+                            <!-- <a href="#" class="text-indigo-600 hover:text-indigo-800 text-3xl transition-colors"><i class="fab fa-facebook"></i></a> -->
+                            <!-- <a href="#" class="text-indigo-600 hover:text-indigo-800 text-3xl transition-colors"><i class="fab fa-twitter"></i></a> -->
+                            <a href="https://www.youtube.com/@Mecaruben" class="text-indigo-600 hover:text-indigo-800 text-3xl transition-colors"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="#" class="text-indigo-600 hover:text-indigo-800 text-3xl transition-colors"><i class="fab fa-instagram"></i></a> -->
+                            <!-- <a href="#" class="text-indigo-600 hover:text-indigo-800 text-3xl transition-colors"><i class="fab fa-linkedin"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mechtronics. Todos los derechos reservados.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de Privacidad</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
